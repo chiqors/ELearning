@@ -43,7 +43,7 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="row">
-										<a href="{{ site_url('petugasadministrasi/instruktur/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Tambah Kursus</a>
+										<a href="{{ site_url('petugasadministrasi/instruktur/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Tambah Instruktur</a>
 									</div>
 								</div>
 							</div>

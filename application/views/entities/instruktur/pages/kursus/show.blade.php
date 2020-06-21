@@ -73,7 +73,7 @@
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="row">
-										<a href="{{ site_url('instruktur/materi/create/'.@$info->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Tambah Materi</a>
+										<a href="{{ site_url('instruktur/kursus/materi/create/'.@$info->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Tambah Materi</a>
 									</div>
 								</div>
 							</div>
@@ -95,9 +95,9 @@
 										<td>{{ $info_data->judul }}</td>
 										<td>{{ $info_data->deskripsi }}</td>
 										<td>
-											<a href="{{ site_url('instruktur/materi/show/'.$info_data->id) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>
-											<a href="{{ site_url('instruktur/materi/edit/'.$info_data->id) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
-											<a href="{{ site_url('instruktur/materi/destroy/'.$info_data->id) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
+											<a href="{{ site_url('instruktur/kursus/materi/show/'.@$info->id.'/'.$info_data->id) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>
+											<a href="{{ site_url('instruktur/kursus/materi/edit/'.@$info->id.'/'.$info_data->id) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
+											<a href="{{ site_url('instruktur/kursus/materi/destroy/'.@$info->id.'/'.$info_data->id) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
 										</td>
 									</tr>
 									@endforeach

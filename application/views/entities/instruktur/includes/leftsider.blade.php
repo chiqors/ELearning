@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-light-warning elevation-4">
+<aside class="main-sidebar sidebar-light-danger elevation-4">
     <!-- Brand Logo -->
     <a href="{{ site_url('instruktur') }}" class="brand-link bg-gray-light">
         <img src="{{ asset('cpanel/img/logo.png') }}" alt="Logo" class="brand-image"
@@ -30,7 +30,7 @@
                         </p>
                     </a>
 				</li>
-            </ul>
+			</ul>
         </nav>
         <!-- /.sidebar-menu -->
     </div>

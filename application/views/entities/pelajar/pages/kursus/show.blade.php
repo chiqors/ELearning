@@ -53,11 +53,6 @@
 							</table>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-12">
-							<a href="{{ site_url('pelajar/kursus/join/'.$info->id_kursus) }}" class="btn btn-primary"></a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -84,13 +79,17 @@
 									</tr>
 								</thead>
 								<tbody>
+									@if(@$info2)
+									@foreach ($info2 as $info_data)
 									<tr>
-										<td>{{ $info->judul }}</td>
-										<td>{{ $info->deskripsi }}</td>
+										<td>{{ $info_data->judul }}</td>
+										<td>{{ $info_data->deskripsi }}</td>
 										<td>
-											<a href="{{ site_url('pelajar/kursus/show_materi/'.$info2->id_materi) }}" class="btn btn-primary">Lihat</a>
+											<a href="{{ site_url('pelajar/kursus/show_materi/'.$info_data->id) }}" class="btn btn-primary">Lihat</a>
 										</td>
 									</tr>
+									@endforeach
+									@endif
 								</tbody>
 							</table>
 						</div>

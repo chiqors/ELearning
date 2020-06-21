@@ -43,7 +43,7 @@
 								<tbody>
 									<tr>
 										<td>ID Pengguna</td>
-										<td>{{ $info->id_pengguna }}</td>
+										<td>{{ $info->id }}</td>
 									</tr>
 									<tr>
 										<td>Username</td>
@@ -76,7 +76,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<a href="{{ site_url('petugasadministrasi/pelajar/edit/'.$info->id) }}" class="btn btn-warning">Edit</a>
-							<a href="{{ site_url('petugasadministrasi/pelajar/destroy/'.$info->id) }}" class="btn btn-warning">Hapus</a>
+							<a href="{{ site_url('petugasadministrasi/pelajar/destroy/'.$info->id) }}" class="btn btn-danger">Hapus</a>
 						</div>
 					</div>
 				</div>

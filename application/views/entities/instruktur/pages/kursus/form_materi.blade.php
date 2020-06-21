@@ -25,7 +25,7 @@
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
-        <form role="form" action="{{ @$info ? site_url('instruktur/materi/update/'.@$info->id) : site_url('instruktur/materi/store') }}" enctype="multipart/form-data" method="POST">
+        <form role="form" action="{{ @$info ? site_url('instruktur/kursus/materi/update/'.@$info->id) : site_url('instruktur/kursus/materi/store') }}" enctype="multipart/form-data" method="POST">
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-12">
@@ -43,7 +43,8 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="row">
-								<div class="col-6">
+								<div class="col-12">
+										<input type="hidden" class="form-control" name="id_kursus" value="{{ @$id_kursus }}" readonly>
 									<div class="form-group">
 										<label for="judul">Judul</label>
 										<input type="text" class="form-control" name="judul" value="{{ @$info->judul }}">
@@ -54,7 +55,7 @@
 									</div>
 									<div class="form-group">
 										<label for="konten">Konten</label>
-										<textarea class="form-control" name="konten">{!! @$info->konten !!}</textarea>
+										<textarea class="form-control" name="konten"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="video">Video URL</label>

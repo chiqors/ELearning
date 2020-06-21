@@ -45,7 +45,7 @@
                             <div class="row">
 								<div class="col-6">
 									<div class="form-group">
-										<label for="NamaKursus">Nama Kursus</label>
+										<label for="nama">Nama Kursus</label>
 										<input type="text" class="form-control" name="nama" value="{{ @$info->nama_lengkap }}">
 									</div>
 									<div class="form-group">

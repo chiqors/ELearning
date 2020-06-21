@@ -62,8 +62,9 @@ $route['auth/register'] = 'auth/register';
 
 $route['pelajar'] = 'Pelajar_Beranda/index';
 
-$route['pelajar/join_course/(:any)'] = 'Pelajar_Beranda/join/$1';
-$route['pelajar/pay'] = 'Pelajar_Beranda/pay/$1';
+$route['pelajar/join/(:any)'] = 'Pelajar_Beranda/join/$1';
+$route['pelajar/pembayaran'] = 'Pelajar_Beranda/pembayaran';
+$route['pelajar/pembayaran/store'] = 'Pelajar_Beranda/pembayaran/store';
 
 $route['pelajar/kursus'] = 'Pelajar_Kursus/index';
 $route['pelajar/kursus/show/(:any)'] = 'Pelajar_Kursus/show/$1';
@@ -78,23 +79,16 @@ $route['pelajar/nilai'] = 'Pelajar_Nilai/index';
 
 $route['instruktur'] = 'Instruktur_Beranda/index';
 
-$route['instruktur/materi'] = 'Instruktur_Materi/index';
-$route['instruktur/materi/create'] = 'Instruktur_Materi/create';
-$route['instruktur/materi/store'] = 'Instruktur_Materi/store';
-$route['instruktur/materi/show/(:any)'] = 'Instruktur_Materi/show/$1';
-$route['instruktur/materi/edit/(:any)'] = 'Instruktur_Materi/edit/$1';
-$route['instruktur/materi/update/(:any)'] = 'Instruktur_Materi/update/$1';
-$route['instruktur/materi/destroy/(:any)'] = 'Instruktur_Materi/destroy/$1';
-$route['instruktur/materi/nilai'] = 'Instruktur_Materi/nilai';
-$route['instruktur/materi/nilai/(:any)'] = 'Instruktur_Materi/nilai/$1';
-
 $route['instruktur/kursus'] = 'Instruktur_Kursus/index';
-$route['instruktur/kursus/create'] = 'Instruktur_Kursus/create';
-$route['instruktur/kursus/store'] = 'Instruktur_Kursus/store';
 $route['instruktur/kursus/show/(:any)'] = 'Instruktur_Kursus/show/$1';
-$route['instruktur/kursus/edit/(:any)'] = 'Instruktur_Kursus/edit/$1';
-$route['instruktur/kursus/update/(:any)'] = 'Instruktur_Kursus/update/$1';
-$route['instruktur/kursus/destroy/(:any)'] = 'Instruktur_Kursus/destroy/$1';
+$route['instruktur/kursus/materi/create/(:any)'] = 'Instruktur_Kursus/create_materi/$1';
+$route['instruktur/kursus/materi/store'] = 'Instruktur_Kursus/store_materi';
+$route['instruktur/kursus/materi/show/(:num)/(:num)'] = 'Instruktur_Kursus/show_materi/$1/$2';
+$route['instruktur/kursus/materi/edit/(:num)/(:num)'] = 'Instruktur_Kursus/edit_materi/$1/$2';
+$route['instruktur/kursus/materi/update/(:num)/(:num)'] = 'Instruktur_Kursus/update_materi/$1/$2';
+$route['instruktur/kursus/materi/destroy/(:num)/(:num)'] = 'Instruktur_Kursus/destroy_materi/$1/$2';
+$route['instruktur/kursus/materi/nilai'] = 'Instruktur_Nilai/nilai';
+$route['instruktur/kursus/materi/nilai/(:any)'] = 'Instruktur_Nilai/nilai/$1';
 
 // -----------------
 // PETUGAS ADMINISTRASI
@@ -102,10 +96,22 @@ $route['instruktur/kursus/destroy/(:any)'] = 'Instruktur_Kursus/destroy/$1';
 
 $route['petugasadministrasi'] = 'PetugasAdministrasi_Beranda/index';
 
-$route['petugasadministrasi/kursus/show/(:any)'] = 'PetugasAdministrasi_Beranda/show/$1';
+$route['petugasadministrasi/kursus'] = 'PetugasAdministrasi_Kursus/index';
+$route['petugasadministrasi/kursus/create'] = 'PetugasAdministrasi_Kursus/create';
+$route['petugasadministrasi/kursus/store'] = 'PetugasAdministrasi_Kursus/store';
+$route['petugasadministrasi/kursus/show/(:any)'] = 'PetugasAdministrasi_Kursus/show/$1';
+$route['petugasadministrasi/kursus/edit/(:any)'] = 'PetugasAdministrasi_Kursus/edit/$1';
+$route['petugasadministrasi/kursus/update/(:any)'] = 'PetugasAdministrasi_Kursus/update/$1';
+$route['petugasadministrasi/kursus/destroy/(:any)'] = 'PetugasAdministrasi_Kursus/destroy/$1';
 
-$route['petugasadministrasi/pelajar_approval'] = 'PetugasAdministrasi_Pelajar/approve';
-$route['petugasadministrasi/pelajar_store'] = 'PetugasAdministrasi_Pelajar/store';
+
+$route['petugasadministrasi/pelajar'] = 'PetugasAdministrasi_Pelajar/index';
+$route['petugasadministrasi/pelajar/create'] = 'PetugasAdministrasi_Pelajar/create';
+$route['petugasadministrasi/pelajar/store'] = 'PetugasAdministrasi_Pelajar/store';
+$route['petugasadministrasi/pelajar/show/(:any)'] = 'PetugasAdministrasi_Pelajar/show/$1';
+$route['petugasadministrasi/pelajar/edit/(:any)'] = 'PetugasAdministrasi_Pelajar/edit/$1';
+$route['petugasadministrasi/pelajar/update/(:any)'] = 'PetugasAdministrasi_Pelajar/update/$1';
+$route['petugasadministrasi/pelajar/destroy/(:any)'] = 'PetugasAdministrasi_Pelajar/destroy/$1';
 
 $route['petugasadministrasi/instruktur'] = 'PetugasAdministrasi_Instruktur/index';
 $route['petugasadministrasi/instruktur/create'] = 'PetugasAdministrasi_Instruktur/create';
@@ -124,9 +130,5 @@ $route['petugasadministrasi/petugas/update/(:any)'] = 'PetugasAdministrasi_Self/
 $route['petugasadministrasi/petugas/destroy/(:any)'] = 'PetugasAdministrasi_Self/destroy/$1';
 
 $route['petugasadministrasi/pembayaran'] = 'PetugasAdministrasi_Pembayaran/index';
-$route['petugasadministrasi/pembayaran/create'] = 'PetugasAdministrasi_Pembayaran/create';
-$route['petugasadministrasi/pembayaran/store'] = 'PetugasAdministrasi_Pembayaran/store';
 $route['petugasadministrasi/pembayaran/show/(:any)'] = 'PetugasAdministrasi_Pembayaran/show/$1';
-$route['petugasadministrasi/pembayaran/edit/(:any)'] = 'PetugasAdministrasi_Pembayaran/edit/$1';
 $route['petugasadministrasi/pembayaran/update/(:any)'] = 'PetugasAdministrasi_Pembayaran/update/$1';
-$route['petugasadministrasi/pembayaran/destroy/(:any)'] = 'PetugasAdministrasi_Pembayaran/destroy/$1';

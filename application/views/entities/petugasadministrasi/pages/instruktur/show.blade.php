@@ -43,7 +43,7 @@
 								<tbody>
 									<tr>
 										<td>ID Pengguna</td>
-										<td>{{ $info->id_pengguna }}</td>
+										<td>{{ $info->id }}</td>
 									</tr>
 									<tr>
 										<td>Username</td>
@@ -70,7 +70,7 @@
 										<td>{{ $info->kontak }}</td>
 									</tr>
 									<tr>
-										<td>Kontak</td>
+										<td>Pendidikan Terakhir</td>
 										<td>{{ $info->pendidikan_terakhir }}</td>
 									</tr>
 								</tbody>
@@ -80,7 +80,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<a href="{{ site_url('petugasadministrasi/instruktur/edit/'.$info->id) }}" class="btn btn-warning">Edit</a>
-							<a href="{{ site_url('petugasadministrasi/instruktur/destroy/'.$info->id) }}" class="btn btn-warning">Hapus</a>
+							<a href="{{ site_url('petugasadministrasi/instruktur/destroy/'.$info->id) }}" class="btn btn-danger">Hapus</a>
 						</div>
 					</div>
 				</div>

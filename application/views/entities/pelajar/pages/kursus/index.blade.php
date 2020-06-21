@@ -58,8 +58,11 @@
                                     <td>{{ $info_data->nama }}</td>
                                     <td>{{ $info_data->tingkat_edukasi }}</td>
 									<td>
-										<a href="{{ site_url('pelajar/kursus/show/'.$info_data->id_kursus) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Gabung</a>
-                                    </td>
+										<a href="{{ site_url('pelajar/kursus/show/'.$info_data->id) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>
+										@if(@$info_pembayaran_kursus)
+										<a href="{{ site_url('pelajar/pembayaran') }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Bayar</a>
+										@endif
+									</td>
 								</tr>
 								@endforeach
                             </tbody>

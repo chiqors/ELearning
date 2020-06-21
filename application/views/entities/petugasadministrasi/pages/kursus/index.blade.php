@@ -1,4 +1,4 @@
-@extends('entities.pelajar.layouts.panel')
+@extends('entities.petugasadministrasi.layouts.panel')
 
 @section('hstyles')
 <!-- DataTables -->
@@ -69,9 +69,9 @@
                                     <td>{{ $info_data->nama }}</td>
                                     <td>{{ $info_data->tingkat_edukasi }}</td>
 									<td>
-										<a href="{{ site_url('petugasadministrasi/kursus/show/'.$info_data->id_kursus) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>
-										<a href="{{ site_url('petugasadministrasi/kursus/edit/'.$info_data->id_kursus) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
-										<a href="{{ site_url('petugasadministrasi/kursus/destroy/'.$info_data->id_kursus) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
+										<a href="{{ site_url('petugasadministrasi/kursus/show/'.$info_data->id) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>
+										<a href="{{ site_url('petugasadministrasi/kursus/edit/'.$info_data->id) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
+										<a href="{{ site_url('petugasadministrasi/kursus/destroy/'.$info_data->id) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
                                     </td>
 								</tr>
 								@endforeach

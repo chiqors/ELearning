@@ -62,8 +62,7 @@
                                     <td>{{ $info_data->nominal }}</td>
                                     <td>{{ $info_data->nama_pembayaran }}</td>
 									<td>
-										<a href="{{ site_url('petugasadministrasi/pembayaran/edit/'.$info_data->id) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
-										<a href="{{ site_url('petugasadministrasi/pembayaran/destroy/'.$info_data->id) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
+										<a href="{{ site_url('petugasadministrasi/pembayaran/update/'.$info_data->id) }}" class="btn btn-warning btn-primary"><i class="fa fa-edit"></i> Approve</a>
                                     </td>
 								</tr>
 								@endforeach

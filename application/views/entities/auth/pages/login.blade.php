@@ -20,15 +20,15 @@
 			@endif
 			<p class="login-box-msg">Masuk ke Sistem</p>
 
-			<form action="{{ site_url('auth/do_register') }}" method="post">
+			<form action="{{ site_url('auth/do_login') }}" method="post">
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" name="Username" placeholder="Username">
+					<input type="text" class="form-control" name="username" placeholder="Username">
 					<div class="input-group-append">
 						<span class="fa fa-user input-group-text"></span>
 					</div>
 				</div>
 				<div class="input-group mb-3">
-					<input type="password" class="form-control" name="Password" placeholder="Password">
+					<input type="password" class="form-control" name="password" placeholder="Password">
 					<div class="input-group-append">
 						<span class="fa fa-lock input-group-text"></span>
 					</div>

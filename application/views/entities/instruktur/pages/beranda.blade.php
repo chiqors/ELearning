@@ -1,4 +1,4 @@
-@extends('entities.pantry.layouts.panel')
+@extends('entities.instruktur.layouts.panel')
 
 @section('hstyles')
 <!-- DataTables -->
@@ -33,8 +33,8 @@
 					<div class="info-box-content">
 						<span class="info-box-text">Total Kursus</span>
 						<span class="info-box-number">
-							@if(@$info_total_kursus)
-							{{ $info_total_kursus }}
+							@if(@$info_total_kursus_ajar)
+							{{ $info_total_kursus_ajar }}
 							@else
 							Belum Mempunyai
 							@endif
@@ -50,8 +50,8 @@
 					<div class="info-box-content">
 						<span class="info-box-text">Total Pelajar yang diikuti kursus</span>
 						<span class="info-box-number">
-							@if(@$info_total_pelajar)
-							{{ $info_total_pelajar }}
+							@if(@$info_total_kursus_pelajar)
+							{{ $info_total_kursus_pelajar }}
 							@else
 							Belum Ada
 							@endif
@@ -79,17 +79,16 @@
 					<table id="table-data" class="table table-bordered table-striped text-center table-responsive-sm">
 						<thead>
 							<tr>
-								<th>#</th>
 								<th>Nama</th>
 								<th>Tingkat Edukasi</th>
 								<th>Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
-							@if(@$info_kursus)
-							@foreach ($info_kursus as $info_data)
+							@if(@$info_list_kursus_ajar)
+							@foreach ($info_list_kursus_ajar as $info_data)
 							<tr>
-								<td>{{ $info_data->Nama }}</td>
+								<td>{{ $info_data->nama }}</td>
 								<td>{{ $info_data->tingkat_edukasi }}</td>
 								<td>
 									<a href="{{ site_url('instruktur/kursus/show/'.$info_data->id) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>

@@ -88,13 +88,13 @@
 							</tr>
 						</thead>
 						<tbody>
-							@if(@$info_all_kursus)
-							@foreach ($info_all_kursus as $info_data)
+							@if(@$info_list_kursus)
+							@foreach ($info_list_kursus as $info_data)
 							<tr>
 								<td>{{ $info_data->nama }}</td>
 								<td>{{ $info_data->tingkat_edukasi }}</td>
 								<td>
-									<a href="{{ site_url('petugasadministrasi/kursus/show/'.$info_data->id_kursus) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Gabung</a>
+									<a href="{{ site_url('petugasadministrasi/kursus/show/'.$info_data->id) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Lihat</a>
 								</td>
 							</tr>
 							@endforeach

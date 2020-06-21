@@ -51,19 +51,19 @@
 									</tr>
 									<tr>
 										<td>Konten</td>
-										<td>{!! $info->konten !!}}</td>
+										<td>{{  $info->konten }}</td>
 									</tr>
 									<tr>
 										<td>Video</td>
-										<td>{!! $info->video !!}}</td>
+										<td>{{  $info->video }}</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 					<div class="row">
-						<a href="{{ site_url('instruktur/materi/edit/'.$info->id) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
-						<a href="{{ site_url('instruktur/materi/destroy/'.$info->id) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
+						<a href="{{ site_url('instruktur/kursus/materi/edit/'.$id_kursus.'/'.$info->id) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Ubah</a>
+						<a href="{{ site_url('instruktur/kursus/materi/destroy/'.$id_kursus.'/'.$info->id) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Hapus</a>
 					</div>
 				</div>
 			</div>

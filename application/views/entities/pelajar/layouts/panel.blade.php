@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ getenv('APP_NAME') }} | Panel(CS) - {{ $title }}</title>
+    <title>{{ getenv('APP_NAME') }} | Panel(Pelajar) - {{ $title }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -20,15 +20,15 @@
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        @include('entities.customer_servis.includes.header')
-        @include('entities.customer_servis.includes.leftsider')
+        @include('entities.pelajar.includes.header')
+        @include('entities.pelajar.includes.leftsider')
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            @include('entities.customer_servis.includes.messages')
+            @include('entities.pelajar.includes.messages')
             @yield('content')
         </div>
         <!-- /.content-wrapper -->
-        @include('entities.customer_servis.includes.footer')
+        @include('entities.pelajar.includes.footer')
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->

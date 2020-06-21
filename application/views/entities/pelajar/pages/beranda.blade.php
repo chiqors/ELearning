@@ -31,13 +31,9 @@
 				<div class="info-box mb-3">
 					<span class="info-box-icon bg-info elevation-1"><i class="fa fa-calendar-o"></i></span>
 					<div class="info-box-content">
-						<span class="info-box-text">Kursus Terakhir Diikuti</span>
+						<span class="info-box-text">Total Kursus Diikuti</span>
 						<span class="info-box-number">
-							@if(@$info_kursus_lampau)
-							{{ $info_kursus_lampau }}
-							@else
-							Belum Ada
-							@endif
+							Belum ada
 						</span>
 					</div>
 					<!-- /.info-box-content -->
@@ -50,7 +46,7 @@
 					<div class="info-box-content">
 						<span class="info-box-text">Total Kursus Tercapai</span>
 						<span class="info-box-number">
-							@if(@$info_total_kursus_tercapai && @$info_total_kursus)
+							@if(@$info_total_kursus_tercapai)
 							{{ $info_total_kursus_tercapai }} / {{ $info_total_kursus }}
 							@else
 							0 / 0
@@ -94,7 +90,10 @@
 								<td>{{ $info_data->nama }}</td>
 								<td>{{ $info_data->tingkat_edukasi }}</td>
 								<td>
-									<a href="{{ site_url('pelajar/join_course/'.$info_data->id_kursus) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Gabung</a>
+									<a href="{{ site_url('pelajar/join/'.$info_data->id_kursus) }}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Gabung</a>
+									@if(!$info_pembayaran_kursus)
+									<a href="{{ site_url('pelajar/pembayaran') }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Bayar</a>
+									@endif
 								</td>
 							</tr>
 							@endforeach

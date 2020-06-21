@@ -1,4 +1,4 @@
-@extends('entities.pelajar.layouts.panel')
+@extends('entities.petugasadministrasi.layouts.panel')
 
 @section('hstyles')
 
@@ -84,7 +84,7 @@
 										<td>{{ $info_data->judul }}</td>
 										<td>{{ $info_data->deskripsi }}</td>
 										<td>
-											<a href="{{ site_url('pelajar/kursus/show_materi/'.$info_data->id_materi) }}" class="btn btn-primary">Lihat</a>
+											<a href="{{ site_url('pelajar/kursus/show_materi/'.$info_data->id) }}" class="btn btn-primary">Lihat</a>
 										</td>
 									</tr>
 									@endforeach
